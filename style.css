@@ -1,0 +1,5611 @@
+/* =========================================================
+   INVITACIÓN DENISE & MIGUEL
+   STYLE.CSS
+========================================================= */
+
+
+/* =========================================================
+   VARIABLES
+========================================================= */
+
+:root {
+
+    --trigo: #D4B296;
+    --crema-almendra: #F7EDE2;
+
+    --texto: #66584f;
+    --texto-suave: #8a7b70;
+
+    --blanco: #fffdf9;
+
+    --vh: 100dvh;
+
+}
+
+
+/* =========================================================
+   RESET
+========================================================= */
+
+* {
+
+    margin: 0;
+    padding: 0;
+
+    box-sizing: border-box;
+
+}
+
+
+html {
+
+    scroll-behavior: smooth;
+
+}
+
+
+body {
+
+    min-height: 100%;
+    color: var(--texto);
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+    overflow-x: hidden;
+
+    background-image: url("coru2.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+
+}
+
+
+/* =========================================================
+   INVITACIÓN
+========================================================= */
+
+#invitation {
+
+   
+
+           position: relative;
+    width: 100%;
+    min-height: 100vh;
+    background: transparent;
+
+}
+
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.hero {
+
+    position: relative;
+
+    width: 100%;
+
+    min-height: 100dvh;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    overflow: hidden;
+
+    background-image:
+        linear-gradient(
+            rgba(40, 25, 20, .18),
+            rgba(40, 25, 20, .32)
+        ),
+        url("hero.jpeg");
+
+    background-size: cover;
+
+    background-position: center center;
+
+    background-repeat: no-repeat;
+}
+
+
+/*
+    Espacio preparado para la fotografía
+    del Hero.
+*/
+
+.hero::before {
+
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    background:
+
+        radial-gradient(
+            circle at center,
+            rgba(255,255,255,.12),
+            transparent 55%
+        );
+
+    pointer-events: none;
+
+}
+
+
+.hero-overlay {
+
+    position: absolute;
+
+    inset: 0;
+
+    background:
+
+        linear-gradient(
+            to bottom,
+            rgba(40,25,20,.08),
+            rgba(40,25,20,.30)
+        );
+
+}
+
+
+.hero-content {
+
+    position: relative;
+
+    z-index: 2;
+
+    width: min(90%, 700px);
+
+    padding: 30px 20px;
+
+    text-align: center;
+
+    color: white;
+
+}
+
+
+.hero-small {
+
+    font-size:
+        clamp(.8rem, 2vw, 1.1rem);
+
+    letter-spacing: .25em;
+
+    text-transform: uppercase;
+
+    margin-bottom: 25px;
+
+    opacity: .9;
+
+}
+
+
+.hero-line {
+
+    width: 70px;
+
+    height: 1px;
+
+    margin:
+        0 auto 30px;
+
+    background:
+        rgba(255,255,255,.7);
+
+}
+
+
+.hero h1 {
+
+    font-size:
+        clamp(3rem, 10vw, 7rem);
+
+    font-weight: normal;
+
+    line-height: .9;
+
+    letter-spacing: .03em;
+
+}
+
+
+.hero h1 span {
+
+    display: block;
+
+    margin: 15px 0;
+
+    font-size: .35em;
+
+}
+
+
+.hero-date {
+
+    margin-top: 35px;
+
+    font-size:
+        clamp(1rem, 3vw, 1.4rem);
+
+    letter-spacing: .25em;
+
+}
+
+
+.hero-location {
+
+    margin-top: 10px;
+
+    font-size: 1rem;
+
+    opacity: .85;
+
+}
+
+
+/* =========================================================
+   SCROLL
+========================================================= */
+
+.scroll-indicator {
+
+    margin-top: 80px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    gap: 10px;
+
+    font-size: .75rem;
+
+    letter-spacing: .15em;
+
+    text-transform: uppercase;
+
+    opacity: .75;
+
+}
+
+
+.scroll-arrow {
+
+    font-size: 1.4rem;
+
+    animation:
+        arrowMove 1.5s infinite ease-in-out;
+
+}
+
+
+@keyframes arrowMove {
+
+    0%,
+    100% {
+
+        transform:
+            translateY(0);
+
+    }
+
+    50% {
+
+        transform:
+            translateY(8px);
+
+    }
+
+}
+
+
+/* =========================================================
+   BODY DE LA INVITACIÓN
+========================================================= */
+
+.invitation-body {
+
+   
+
+          width: 100%;
+    padding:
+        100px 20px 80px;
+    background: transparent;
+
+}
+
+
+.section-inner {
+
+    width:
+        min(100%, 700px);
+
+    margin:
+        0 auto;
+
+    text-align: center;
+
+}
+
+
+.eyebrow {
+
+     color:
+        #423c37;
+
+    font-size: .75rem;
+
+    letter-spacing: .3em;
+
+    text-transform: uppercase;
+
+    margin-bottom: 20px;
+
+}
+
+
+.section-inner h2 {
+
+    color:
+        var(--texto);
+
+    font-size:
+        clamp(2rem, 6vw, 3.5rem);
+
+    font-weight: normal;
+
+    line-height: 1.15;
+
+}
+
+
+.description {
+
+    margin-top: 30px;
+
+    color:
+        var(--texto-suave);
+
+    font-size: 1.05rem;
+
+    line-height: 1.9;
+
+}
+
+
+/* =========================================================
+   SOBRE
+========================================================= */
+
+.envelope-screen {
+
+    position: fixed;
+
+    inset: 0;
+
+    width: 100vw;
+
+    height: var(--vh);
+
+    z-index: 1000;
+
+    overflow: hidden;
+
+    background:
+        var(--crema-almendra);
+
+    perspective: 1800px;
+
+    transition:
+        visibility .5s linear;
+
+}
+/* =========================================================
+   SOBRE COMPLETAMENTE OCULTO
+   Después de terminar la animación
+========================================================= */
+
+.envelope-screen.hidden {
+
+    visibility: hidden;
+
+    opacity: 0;
+
+    pointer-events: none;
+
+}
+
+/* =========================================================
+   FONDO DEL SOBRE
+========================================================= */
+
+.envelope-background {
+
+    position: absolute;
+
+    inset: 0;
+
+    background:
+
+        radial-gradient(
+            circle at center,
+            #fffaf5 0%,
+            var(--crema-almendra) 55%,
+            #ead6c5 100%
+        );
+
+}
+
+
+/*
+    Iluminación suave sobre el papel.
+*/
+
+.envelope-background::after {
+
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    background:
+
+        radial-gradient(
+            ellipse at center,
+            rgba(255,255,255,.55),
+            transparent 65%
+        );
+
+    pointer-events: none;
+
+}
+
+
+/* =========================================================
+   PANELES DEL SOBRE
+========================================================= */
+
+.envelope-panel {
+
+    position: absolute;
+
+    top: 0;
+
+    width: 50%;
+
+    height: 100%;
+
+    z-index: 2;
+
+    /*
+        Papel base.
+    */
+
+    background:
+
+        linear-gradient(
+            90deg,
+            rgba(255,255,255,.35),
+            transparent 38%,
+            rgba(100,70,50,.08)
+        ),
+
+        linear-gradient(
+            180deg,
+            #fbf1e7,
+            #f0dfd0
+        );
+
+    /*
+        La animación importante.
+    */
+
+    transition:
+
+        transform 1.6s
+        cubic-bezier(
+            .77,
+            0,
+            .18,
+            1
+        );
+
+    will-change:
+        transform;
+
+    transform-style:
+        preserve-3d;
+
+}
+
+
+/* =========================================================
+   PAPEL / TEXTURA
+========================================================= */
+
+.envelope-panel::before {
+
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    opacity: .25;
+
+    pointer-events: none;
+
+    background:
+
+        radial-gradient(
+            circle at 20% 20%,
+            rgba(120,80,55,.10) 0 1px,
+            transparent 1.5px
+        );
+
+    background-size:
+        9px 9px;
+
+}
+
+
+.paper-highlight {
+
+    position: absolute;
+
+    inset: 0;
+
+    pointer-events: none;
+
+    background:
+
+        linear-gradient(
+            90deg,
+            transparent 0%,
+            rgba(255,255,255,.30) 45%,
+            transparent 100%
+        );
+
+    opacity: .8;
+
+}
+
+
+/* =========================================================
+   PANEL IZQUIERDO
+========================================================= */
+
+.panel-left {
+
+    left: 0;
+
+    transform-origin:
+        left center;
+
+    border-radius:
+        0 3px 3px 0;
+
+    box-shadow:
+
+        12px 0 35px
+        rgba(70,45,30,.12);
+
+}
+
+
+.panel-left .paper-highlight {
+
+    transform:
+        translateX(-20%);
+
+}
+
+
+/* =========================================================
+   PANEL DERECHO
+========================================================= */
+
+.panel-right {
+
+    right: 0;
+
+    transform-origin:
+        right center;
+
+    border-radius:
+        3px 0 0 3px;
+
+    box-shadow:
+
+        -12px 0 35px
+        rgba(70,45,30,.12);
+
+}
+
+
+.panel-right .paper-highlight {
+
+    transform:
+        translateX(20%);
+
+}
+
+
+/* =========================================================
+   PLIEGUE CENTRAL
+========================================================= */
+
+.center-fold {
+
+    position: absolute;
+
+    top: 0;
+
+    left: 50%;
+
+    width: 5px;
+
+    height: 100%;
+
+    transform:
+        translateX(-50%);
+
+    z-index: 5;
+
+    background:
+
+        linear-gradient(
+            90deg,
+            rgba(80,50,35,.13),
+            rgba(255,255,255,.30),
+            rgba(80,50,35,.13)
+        );
+
+    box-shadow:
+
+        0 0 18px
+        rgba(80,50,35,.12);
+
+    transition:
+        opacity .6s ease;
+
+}
+
+
+/* =========================================================
+   SELLO — IMAGEN REAL
+========================================================= */
+
+.seal {
+
+    position: absolute;
+
+    top: 50%;
+    left: 50%;
+
+    width:
+        clamp(
+             140px,
+        30vw,
+        210px
+        );
+
+    height:
+        clamp(
+             140px,
+        30vw,
+        210px
+        );
+
+    padding: 0;
+
+    transform:
+        translate(-50%, -50%);
+
+    z-index: 20;
+
+    border: none;
+
+    background: transparent;
+
+    cursor: pointer;
+
+    transition:
+
+        transform .8s ease,
+        opacity .6s ease;
+
+}
+
+
+/*
+    LA FOTOGRAFÍA REAL DEL SELLO
+*/
+
+.seal-image {
+
+    display: block;
+
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: contain;
+
+    /*
+        Conservamos la forma original
+        de la fotografía.
+    */
+
+    filter:
+
+        drop-shadow(
+            0 12px 18px
+            rgba(60,40,25,.30)
+        );
+
+}
+
+
+/*
+    No fabricamos un sello.
+    Solamente hacemos una pequeña
+    reacción al pasar el cursor.
+*/
+
+.seal:hover {
+
+    transform:
+        translate(-50%, -50%)
+        scale(1.05);
+
+}
+
+
+.seal:active {
+
+    transform:
+        translate(-50%, -50%)
+        scale(.96);
+
+}
+
+
+/* =========================================================
+   INSTRUCCIÓN
+========================================================= */
+
+.envelope-instruction {
+
+    position: absolute;
+
+    bottom: 7%;
+
+    left: 50%;
+
+    transform:
+        translateX(-50%);
+
+    z-index: 20;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    gap: 7px;
+
+    color:
+        rgba(100,75,60,.80);
+
+    text-align: center;
+
+    pointer-events: none;
+
+    transition:
+
+        opacity .5s ease,
+        transform .5s ease;
+
+}
+
+
+.envelope-instruction span {
+
+    font-size: .8rem;
+
+    letter-spacing: .2em;
+
+    text-transform: uppercase;
+
+}
+
+
+.envelope-instruction small {
+
+    font-size: .75rem;
+
+    opacity: .75;
+
+}
+
+
+/* =========================================================
+   BOTÓN CERRAR
+========================================================= */
+
+.close-envelope {
+
+    position: fixed;
+
+    top: 20px;
+
+    right: 20px;
+
+    z-index: 100;
+
+    width: 40px;
+
+    height: 40px;
+
+    border:
+        1px solid
+        rgba(100,75,60,.35);
+
+    border-radius: 50%;
+
+    background:
+        rgba(255,255,255,.20);
+
+    color:
+        var(--texto);
+
+    font-size: 1.5rem;
+
+    cursor: pointer;
+
+    opacity: 0;
+
+    pointer-events: none;
+
+    transition:
+        opacity .4s ease;
+
+}
+
+
+/* =========================================================
+   ESTADO ABIERTO
+========================================================= */
+
+.envelope-screen.opened {
+
+    pointer-events: none;
+
+}
+
+
+/* =========================================================
+   PUERTA IZQUIERDA
+========================================================= */
+
+.envelope-screen.opened
+.panel-left {
+
+    transform:
+
+        translateX(-105%)
+        rotateY(-12deg);
+
+}
+
+
+/* =========================================================
+   PUERTA DERECHA
+========================================================= */
+
+.envelope-screen.opened
+.panel-right {
+
+    transform:
+
+        translateX(105%)
+        rotateY(12deg);
+
+}
+
+
+/* =========================================================
+   PLIEGUE
+========================================================= */
+
+.envelope-screen.opened
+.center-fold {
+
+    opacity: 0;
+
+}
+
+
+/* =========================================================
+   SELLO
+========================================================= */
+
+.envelope-screen.opened
+.seal {
+
+    opacity: 0;
+
+    transform:
+
+        translate(-50%, -50%)
+        scale(.5);
+
+}
+
+
+/* =========================================================
+   TEXTO
+========================================================= */
+
+.envelope-screen.opened
+.envelope-instruction {
+
+    opacity: 0;
+
+    transform:
+
+        translate(
+            -50%,
+            20px
+        );
+
+}
+
+
+/* =========================================================
+   CERRAR
+========================================================= */
+
+.envelope-screen.can-close
+.close-envelope {
+
+    opacity: 1;
+
+    pointer-events: auto;
+
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 768px) {
+
+    .invitation-body {
+
+        padding:
+            80px 20px 60px;
+
+    }
+
+    .scroll-indicator {
+
+        margin-top: 55px;
+
+    }
+
+}
+
+
+/* =========================================================
+   CELULAR
+========================================================= */
+
+@media (max-width: 480px) {
+
+    .hero-content {
+
+        padding: 20px;
+
+    }
+
+
+    .hero-small {
+
+        font-size: .65rem;
+
+        letter-spacing: .18em;
+
+        line-height: 1.6;
+
+    }
+
+
+    .hero h1 {
+
+        font-size:
+            clamp(
+                3rem,
+                17vw,
+                5rem
+            );
+
+    }
+
+
+    .hero-date {
+
+        font-size: .9rem;
+
+        letter-spacing: .18em;
+
+    }
+
+
+    .hero-location {
+
+        font-size: .85rem;
+
+    }
+
+
+    .scroll-indicator {
+
+        margin-top: 45px;
+
+        font-size: .6rem;
+
+    }
+
+
+    .invitation-body {
+
+        padding:
+            70px 18px 50px;
+
+    }
+
+
+    .description {
+
+        font-size: .95rem;
+
+        line-height: 1.8;
+
+    }
+
+
+    .envelope-instruction {
+
+        bottom: 8%;
+
+    }
+
+
+    .envelope-instruction span {
+
+        font-size: .65rem;
+
+        letter-spacing: .15em;
+
+    }
+
+
+    .envelope-instruction small {
+
+        font-size: .65rem;
+
+    }
+
+}
+
+
+/* =========================================================
+   CELULARES MUY PEQUEÑOS
+========================================================= */
+
+@media (max-height: 650px) {
+
+    .envelope-instruction {
+
+        bottom: 4%;
+
+    }
+
+
+    .seal {
+
+        width: 90px;
+
+        height: 90px;
+
+    }
+
+}
+
+
+/* =========================================================
+   REDUCIR ANIMACIONES
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    *,
+    *::before,
+    *::after {
+
+        scroll-behavior:
+            auto !important;
+
+        transition-duration:
+            .01ms !important;
+
+        animation-duration:
+            .01ms !important;
+
+    }
+
+}
+
+
+/* =========================================================
+   NUESTRA HISTORIA
+========================================================= */
+
+.story-section {
+
+    width: 100%;
+
+    padding:
+        120px 20px;
+         background:
+        rgba(247, 237, 226, .55);
+
+       
+
+}
+
+
+.story-inner {
+
+    width:
+        min(100%, 700px);
+
+    margin:
+        0 auto;
+
+    text-align: center;
+
+}
+
+
+.story-inner .eyebrow {
+
+    color:
+        #423c37;
+
+    margin-bottom:
+        22px;
+
+}
+
+
+.story-inner h2 {
+
+    color:
+        var(--texto);
+
+    font-size:
+        clamp(
+            2.2rem,
+            7vw,
+            4rem
+        );
+
+    font-weight:
+        normal;
+
+    line-height:
+        1.15;
+
+}
+
+
+.story-text {
+
+    max-width:
+        600px;
+
+    margin:
+        32px auto 0;
+
+    color:
+        var(--texto-suave);
+
+    font-size:
+        1.05rem;
+
+    line-height:
+        1.9;
+
+}
+
+
+/* =========================================================
+   NUESTRO GRAN DÍA
+========================================================= */
+
+.great-day-section {
+
+    width: 100%;
+
+    padding:
+        120px 20px 130px;
+         background:
+        rgba(247, 237, 226, .55);
+
+
+}
+
+
+.great-day-inner {
+
+    width:
+        min(100%, 850px);
+
+    margin:
+        0 auto;
+
+    text-align: center;
+
+}
+
+
+/* ---------------------------------------------------------
+   TÍTULO
+--------------------------------------------------------- */
+
+.great-day-inner .eyebrow {
+
+    margin-bottom:
+        22px;
+           color:
+        #423c37;
+
+}
+
+
+.great-day-inner h2 {
+
+    color:
+        var(--texto);
+
+    font-size:
+        clamp(
+            2rem,
+            6vw,
+            3.5rem
+        );
+
+    font-weight:
+        normal;
+
+    line-height:
+        1.2;
+
+}
+
+
+/* ---------------------------------------------------------
+   CUENTA REGRESIVA
+--------------------------------------------------------- */
+
+.countdown {
+
+    width: 100%;
+
+    margin:
+        65px auto 0;
+
+    display:
+        grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap:
+        20px;
+
+}
+
+
+/* ---------------------------------------------------------
+   CADA UNIDAD
+--------------------------------------------------------- */
+
+.countdown-item {
+
+    display:
+        flex;
+
+    flex-direction:
+        column;
+
+    align-items:
+        center;
+
+    justify-content:
+        center;
+
+    padding:
+        25px 10px;
+
+}
+
+
+/* ---------------------------------------------------------
+   NÚMEROS
+--------------------------------------------------------- */
+
+.countdown-number {
+
+    display:
+        block;
+
+    color:
+        var(--texto);
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size:
+        clamp(
+            2.5rem,
+            7vw,
+            5rem
+        );
+
+    font-weight:
+        normal;
+
+    line-height:
+        1;
+
+    letter-spacing:
+        .04em;
+
+}
+
+
+/* ---------------------------------------------------------
+   ETIQUETAS
+--------------------------------------------------------- */
+
+.countdown-label {
+
+    margin-top:
+        14px;
+
+    color:
+        var(--texto-suave);
+
+    font-size:
+        .65rem;
+
+    letter-spacing:
+        .22em;
+
+    text-transform:
+        uppercase;
+
+}
+
+
+/* ---------------------------------------------------------
+   MENSAJE FINAL
+--------------------------------------------------------- */
+
+.countdown-finished {
+
+    display:
+        none;
+
+    margin-top:
+        65px;
+
+    color:
+        var(--texto);
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size:
+        clamp(
+            2rem,
+            7vw,
+            4rem
+        );
+
+    font-weight:
+        normal;
+
+    line-height:
+        1.2;
+
+}
+
+
+/* ---------------------------------------------------------
+   CUANDO TERMINA LA CUENTA
+--------------------------------------------------------- */
+
+.great-day-section.is-finished .countdown {
+
+    display:
+        none;
+
+}
+
+
+.great-day-section.is-finished .countdown-finished {
+
+    display:
+        block;
+
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 768px) {
+
+    .great-day-section {
+
+        padding:
+            90px 20px 100px;
+
+    }
+
+    .countdown {
+
+        gap:
+            5px;
+
+    }
+
+    .countdown-item {
+
+        padding:
+            20px 5px;
+
+    }
+
+}
+
+
+/* =========================================================
+   CELULAR
+========================================================= */
+
+@media (max-width: 480px) {
+
+    .great-day-section {
+
+        padding:
+            80px 15px 90px;
+
+    }
+
+
+    .countdown {
+
+        gap:
+            0;
+
+    }
+
+
+    .countdown-item {
+
+        padding:
+            20px 2px;
+
+    }
+
+
+    .countdown-number {
+
+        font-size:
+            clamp(
+                2rem,
+                11vw,
+                3rem
+            );
+
+    }
+
+
+    .countdown-label {
+
+        margin-top:
+            10px;
+
+        font-size:
+            .55rem;
+
+        letter-spacing:
+            .12em;
+
+    }
+
+
+    .countdown-finished {
+
+        margin-top:
+            45px;
+
+    }
+
+}
+/* =========================================================
+   NUESTROS RECUERDOS
+========================================================= */
+
+.memories-section {
+
+    width: 100%;
+
+    padding:
+        120px 20px 130px;
+         background:
+        rgba(247, 237, 226, .55);
+
+}
+
+
+.memories-inner {
+
+    width:
+        min(100%, 1000px);
+
+    margin:
+        0 auto;
+
+    text-align:
+        center;
+
+}
+
+
+/* ---------------------------------------------------------
+   ENCABEZADO
+--------------------------------------------------------- */
+
+.memories-inner .eyebrow {
+
+    margin-bottom:
+        20px;
+
+}
+
+
+.memories-inner h2 {
+
+    color:
+        var(--texto);
+
+    font-size:
+        clamp(
+            2.2rem,
+            7vw,
+            4rem
+        );
+
+    font-weight:
+        normal;
+
+    line-height:
+        1.15;
+
+}
+
+
+.memories-description {
+
+    max-width:
+        600px;
+
+    margin:
+        25px auto 0;
+
+    color:
+        var(--texto-suave);
+
+    font-size:
+        1rem;
+
+    line-height:
+        1.8;
+
+}
+
+
+/* =========================================================
+   SLIDER
+========================================================= */
+
+.memories-slider {
+
+    position:
+        relative;
+
+    width:
+        100%;
+
+    max-width:
+        900px;
+
+    margin:
+        65px auto 0;
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    gap:
+        20px;
+
+}
+
+
+/* ---------------------------------------------------------
+   VENTANA
+--------------------------------------------------------- */
+
+.memory-viewport {
+
+    width:
+        100%;
+
+    overflow:
+        hidden;
+
+    border-radius:
+        2px;
+
+    touch-action:
+        pan-y;
+
+}
+
+
+/* ---------------------------------------------------------
+   TRACK
+--------------------------------------------------------- */
+
+.memory-track {
+
+    display:
+        flex;
+
+    width:
+        100%;
+
+    transition:
+        transform .7s
+        cubic-bezier(
+            .65,
+            0,
+            .35,
+            1
+        );
+
+    will-change:
+        transform;
+
+}
+
+
+/* ---------------------------------------------------------
+   CADA SLIDE
+--------------------------------------------------------- */
+
+.memory-slide {
+
+    flex:
+        0 0 100%;
+
+    width:
+        100%;
+
+}
+
+
+/* ---------------------------------------------------------
+   FOTOGRAFÍA
+--------------------------------------------------------- */
+
+.memory-photo {
+
+    position:
+        relative;
+
+    width:
+        100%;
+
+    aspect-ratio:
+        4 / 5;
+
+    overflow:
+        hidden;
+
+    background:
+        var(--crema-almendra);
+
+}
+
+
+.memory-photo img {
+
+    display:
+        block;
+
+    width:
+        100%;
+
+    height:
+        100%;
+
+    object-fit:
+        cover;
+
+    object-position:
+        center;
+
+}
+
+
+/* =========================================================
+   FLECHAS
+========================================================= */
+
+.memory-arrow {
+
+    flex:
+        0 0 auto;
+
+    width:
+        45px;
+
+    height:
+        45px;
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        center;
+
+    border:
+        1px solid
+        rgba(102, 88, 79, .25);
+
+    border-radius:
+        50%;
+
+    background:
+        rgba(255, 253, 249, .75);
+
+    color:
+        var(--texto);
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size:
+        1.1rem;
+
+    cursor:
+        pointer;
+
+    transition:
+        background .3s ease,
+        color .3s ease,
+        transform .3s ease;
+
+}
+
+
+.memory-arrow:hover {
+
+    background:
+        var(--texto);
+
+    color:
+        var(--blanco);
+
+    transform:
+        scale(1.05);
+
+}
+
+
+.memory-arrow:active {
+
+    transform:
+        scale(.94);
+
+}
+
+
+/* =========================================================
+   CONTADOR
+========================================================= */
+
+.memory-counter {
+
+    margin:
+        22px auto 0;
+
+    color:
+        var(--texto);
+
+    font-size:
+        .8rem;
+
+    letter-spacing:
+        .18em;
+
+}
+
+
+.memory-divider {
+
+    margin:
+        0 5px;
+
+    color:
+        var(--texto-suave);
+
+}
+
+
+/* =========================================================
+   PUNTOS
+========================================================= */
+
+.memory-dots {
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        center;
+
+    gap:
+        9px;
+
+    margin-top:
+        20px;
+
+}
+
+
+.memory-dot {
+
+    width:
+        7px;
+
+    height:
+        7px;
+
+    padding:
+        0;
+
+    border:
+        none;
+
+    border-radius:
+        50%;
+
+    background:
+        rgba(102, 88, 79, .25);
+
+    cursor:
+        pointer;
+
+    transition:
+        transform .3s ease,
+        background .3s ease;
+
+}
+
+
+.memory-dot.active {
+
+    background:
+        var(--trigo);
+
+    transform:
+        scale(1.35);
+
+}
+
+
+.memory-dot:hover {
+
+    background:
+        var(--trigo);
+
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 768px) {
+
+    .memories-section {
+
+        padding:
+            90px 20px 100px;
+
+    }
+
+
+    .memories-slider {
+
+        gap:
+            12px;
+
+    }
+
+
+    .memory-arrow {
+
+        width:
+            40px;
+
+        height:
+            40px;
+
+        font-size:
+            1rem;
+
+    }
+
+}
+
+
+/* =========================================================
+   CELULAR
+========================================================= */
+
+@media (max-width: 480px) {
+
+    .memories-section {
+
+        padding:
+            80px 15px 90px;
+
+    }
+
+
+    .memories-description {
+
+        font-size:
+            .95rem;
+
+        line-height:
+            1.8;
+
+    }
+
+
+    .memories-slider {
+
+        margin-top:
+            45px;
+
+        gap:
+            7px;
+
+    }
+
+
+    .memory-arrow {
+
+        width:
+            34px;
+
+        height:
+            34px;
+
+        font-size:
+            .9rem;
+
+    }
+
+
+    .memory-photo {
+
+        aspect-ratio:
+            4 / 5;
+
+    }
+
+
+    .memory-counter {
+
+        margin-top:
+            18px;
+
+        font-size:
+            .7rem;
+
+    }
+
+}
+
+/* =========================================================
+   FAMILIA
+========================================================= */
+
+.family-section {
+
+    width: 100%;
+
+    padding:
+        120px 20px 140px;
+
+     background:
+        rgba(247, 237, 226, .55);
+
+
+}
+
+
+.family-inner {
+
+    width:
+        min(100%, 900px);
+
+    margin:
+        0 auto;
+
+    text-align:
+        center;
+
+}
+
+
+.family-inner h2 {
+
+    color:
+        var(--texto);
+
+    font-size:
+        clamp(
+            2.2rem,
+            7vw,
+            4rem
+        );
+
+    font-weight:
+        normal;
+
+    line-height:
+        1.15;
+
+}
+
+
+.family-intro {
+
+    max-width:
+        620px;
+
+    margin:
+        25px auto 0;
+
+    color:
+        var(--texto-suave);
+
+    font-size:
+        1rem;
+
+    line-height:
+        1.8;
+
+}
+
+
+/* =========================================================
+   GRUPOS
+========================================================= */
+
+.family-group {
+
+    margin-top:
+        75px;
+
+}
+
+
+.family-label {
+
+    margin-bottom:
+        30px;
+
+    color:
+        var(--trigo);
+
+    font-size:
+        .75rem;
+
+    letter-spacing:
+        .25em;
+
+    text-transform:
+        uppercase;
+
+}
+
+
+/* =========================================================
+   PADRES
+========================================================= */
+
+.family-grid {
+
+    display:
+        grid;
+
+    grid-template-columns:
+        repeat(2, 1fr);
+
+    gap:
+        35px;
+
+    max-width:
+        760px;
+
+    margin:
+        0 auto;
+
+}
+
+
+.family-card {
+
+    background:
+        var(--crema-almendra);
+
+    padding:
+        15px;
+
+}
+
+
+.family-photo {
+
+    width:
+        100%;
+
+    aspect-ratio:
+        4 / 5;
+
+    overflow:
+        hidden;
+
+    background:
+        #eadfd3;
+
+}
+
+
+.family-photo img {
+
+    display:
+        block;
+
+    width:
+        100%;
+
+    height:
+        100%;
+
+    object-fit:
+        cover;
+
+}
+
+
+.family-info {
+
+    padding:
+        25px 10px 15px;
+
+}
+
+
+.family-role {
+
+    display:
+        block;
+
+    margin-bottom:
+        8px;
+
+    color:
+        var(--trigo);
+
+    font-size:
+        .7rem;
+
+    letter-spacing:
+        .15em;
+
+    text-transform:
+        uppercase;
+
+}
+
+
+.family-info h3 {
+
+    color:
+        var(--texto);
+
+    font-size:
+        1.35rem;
+
+    font-weight:
+        normal;
+
+}
+
+
+/* =========================================================
+   FAMILIARES
+========================================================= */
+
+.family-special {
+
+    max-width:
+        760px;
+
+    margin-left:
+        auto;
+
+    margin-right:
+        auto;
+
+}
+
+
+.family-list {
+
+    display:
+        grid;
+
+    grid-template-columns:
+        repeat(2, 1fr);
+
+    gap:
+        1px;
+
+    background:
+        rgba(102, 88, 79, .15);
+
+    border:
+        1px solid
+        rgba(102, 88, 79, .15);
+
+}
+
+
+.family-person {
+
+    padding:
+        25px 20px;
+
+    background:
+        var(--blanco);
+
+}
+
+
+.family-person-role {
+
+    display:
+        block;
+
+    margin-bottom:
+        7px;
+
+    color:
+        var(--texto-suave);
+
+    font-size:
+        .65rem;
+
+    letter-spacing:
+        .15em;
+
+    text-transform:
+        uppercase;
+
+}
+
+
+.family-person h3 {
+
+    color:
+        var(--texto);
+
+    font-size:
+        1.1rem;
+
+    font-weight:
+        normal;
+
+}
+
+
+/* =========================================================
+   CELULAR
+========================================================= */
+
+@media (max-width: 600px) {
+
+    .family-section {
+
+        padding:
+            90px 18px 110px;
+
+    }
+
+
+    .family-grid {
+
+        grid-template-columns:
+            1fr;
+
+        gap:
+            25px;
+
+    }
+
+
+    .family-group {
+
+        margin-top:
+            60px;
+
+    }
+
+
+    .family-list {
+
+        grid-template-columns:
+            1fr;
+
+    }
+
+
+    .family-intro {
+
+        font-size:
+            .95rem;
+
+    }
+
+}
+/* =========================================================
+   ITINERARIO
+========================================================= */
+
+.itinerary-section {
+
+    width: 100%;
+
+    padding:
+        120px 20px 140px;
+ background:
+        rgba(247, 237, 226, .55);
+
+}
+
+
+.itinerary-inner {
+
+    width:
+        min(100%, 850px);
+
+    margin:
+        0 auto;
+
+    text-align:
+        center;
+
+}
+
+
+.itinerary-inner h2 {
+
+    color:
+        var(--texto);
+
+    font-size:
+        clamp(
+            2.2rem,
+            7vw,
+            4rem
+        );
+
+    font-weight:
+        normal;
+
+    line-height:
+        1.15;
+
+}
+
+
+.itinerary-intro {
+
+    max-width:
+        600px;
+
+    margin:
+        25px auto 0;
+
+    color:
+        var(--texto-suave);
+
+    font-size:
+        1rem;
+
+    line-height:
+        1.8;
+
+}
+
+
+/* =========================================================
+   LÍNEA CENTRAL
+========================================================= */
+
+.itinerary-timeline {
+
+    position:
+        relative;
+
+    width:
+        100%;
+
+    max-width:
+        650px;
+
+    margin:
+        90px auto 0;
+
+    padding:
+        20px 0;
+
+}
+
+
+/* ---------------------------------------------------------
+   LÍNEA
+--------------------------------------------------------- */
+
+.itinerary-timeline::before {
+
+    content:
+        "";
+
+    position:
+        absolute;
+
+    top:
+        0;
+
+    bottom:
+        0;
+
+    left:
+        50%;
+
+    width:
+        1px;
+
+    transform:
+        translateX(-50%);
+
+    background:
+        var(--trigo);
+
+    opacity:
+        .65;
+
+}
+
+
+/* =========================================================
+   CADA MOMENTO
+========================================================= */
+
+.itinerary-item {
+
+    position:
+        relative;
+
+    width:
+        50%;
+
+    padding:
+        0 45px 90px;
+
+    text-align:
+        right;
+
+}
+
+
+.itinerary-item:nth-child(even) {
+
+    margin-left:
+        50%;
+
+    text-align:
+        left;
+
+}
+
+
+/* =========================================================
+   PUNTO CENTRAL
+========================================================= */
+
+.itinerary-dot {
+
+    position:
+        absolute;
+
+    top:
+        5px;
+
+    right:
+        -6px;
+
+    width:
+        11px;
+
+    height:
+        11px;
+
+    border:
+        2px solid
+        var(--crema-almendra);
+
+    border-radius:
+        50%;
+
+    background:
+        var(--trigo);
+
+    box-shadow:
+        0 0 0 4px
+        rgba(212, 178, 150, .15);
+
+}
+
+
+.itinerary-item:nth-child(even) .itinerary-dot {
+
+    left:
+        -6px;
+
+    right:
+        auto;
+
+}
+
+
+/* =========================================================
+   CONTENIDO
+========================================================= */
+
+.itinerary-content {
+
+    opacity:
+        1;
+
+}
+
+
+.itinerary-time {
+
+    display:
+        block;
+
+    margin-bottom:
+        10px;
+
+      color:
+        #423c37;
+
+    font-size:
+        .78rem;
+
+    letter-spacing:
+        .2em;
+
+    text-transform:
+        uppercase;
+
+}
+
+
+.itinerary-content h3 {
+
+    margin:
+        0;
+
+    color:
+        var(--texto);
+
+    font-size:
+        clamp(
+            1.5rem,
+            4vw,
+            2rem
+        );
+
+    font-weight:
+        normal;
+
+}
+
+
+.itinerary-content p {
+
+    margin-top:
+        12px;
+
+    color:
+        var(--texto-suave);
+
+    font-size:
+        .95rem;
+
+    line-height:
+        1.8;
+
+}
+
+
+/* =========================================================
+   ÚLTIMO ELEMENTO
+========================================================= */
+
+.itinerary-item:last-child {
+
+    padding-bottom:
+        20px;
+
+}
+
+
+/* =========================================================
+   CELULAR
+========================================================= */
+
+@media (max-width: 600px) {
+
+    .itinerary-section {
+
+        padding:
+            90px 20px 110px;
+
+    }
+
+
+    .itinerary-timeline {
+
+        margin-top:
+            65px;
+
+    }
+
+
+    /*
+        En celular mantenemos
+        la línea ligeramente hacia
+        la izquierda para que el
+        contenido tenga más espacio.
+    */
+
+    .itinerary-timeline::before {
+
+        left:
+            18px;
+
+        transform:
+            none;
+
+    }
+
+
+    .itinerary-item,
+    .itinerary-item:nth-child(even) {
+
+        width:
+            100%;
+
+        margin-left:
+            0;
+
+        padding:
+            0 0 65px 55px;
+
+        text-align:
+            left;
+
+    }
+
+
+    .itinerary-dot,
+    .itinerary-item:nth-child(even) .itinerary-dot {
+
+        left:
+            12px;
+
+        right:
+            auto;
+
+    }
+
+
+    .itinerary-content h3 {
+
+        font-size:
+            1.5rem;
+
+    }
+
+
+    .itinerary-content p {
+
+        font-size:
+            .9rem;
+
+    }
+
+}
+
+/* =========================================================
+   ANIMACIÓN DEL ITINERARIO
+========================================================= */
+
+.itinerary-content {
+
+    opacity: 0;
+
+    transform:
+        translateY(35px);
+
+    transition:
+        opacity .8s ease,
+        transform .8s ease;
+
+}
+
+
+.itinerary-item.visible .itinerary-content {
+
+    opacity: 1;
+
+    transform:
+        translateY(0);
+
+}
+
+
+/* El punto también aparece suavemente */
+
+.itinerary-dot {
+
+    opacity: 0;
+
+    transform:
+        scale(.5);
+
+    transition:
+        opacity .5s ease,
+        transform .5s ease;
+
+}
+
+
+.itinerary-item.visible .itinerary-dot {
+
+    opacity: 1;
+
+    transform:
+        scale(1);
+
+}
+
+/* =========================================================
+   LUGARES
+========================================================= */
+
+.places-section {
+
+    width: 100%;
+
+    padding:
+        120px 20px 140px;
+
+     background:
+        rgba(247, 237, 226, .55);
+}
+
+
+.places-inner {
+
+    width:
+        min(100%, 1000px);
+
+    margin:
+        0 auto;
+
+    text-align:
+        center;
+
+}
+
+
+.places-inner h2 {
+
+    color:
+        var(--texto);
+
+    font-size:
+        clamp(
+            2.2rem,
+            7vw,
+            4rem
+        );
+
+    font-weight:
+        normal;
+
+    line-height:
+        1.15;
+
+}
+
+
+.places-intro {
+
+    max-width:
+        620px;
+
+    margin:
+        25px auto 0;
+
+    color:
+        var(--texto-suave);
+
+    font-size:
+        1rem;
+
+    line-height:
+        1.8;
+
+}
+
+
+/* =========================================================
+   TARJETAS
+========================================================= */
+
+.places-grid {
+
+    display:
+        grid;
+
+    grid-template-columns:
+        repeat(2, 1fr);
+
+    gap:
+        35px;
+
+    max-width:
+        900px;
+
+    margin:
+        70px auto 0;
+
+}
+
+
+.place-card {
+
+    background:
+        var(--blanco);
+
+    box-shadow:
+        0 18px 45px
+        rgba(102, 88, 79, .08);
+
+    overflow:
+        hidden;
+
+    text-align:
+        center;
+
+}
+
+
+/* =========================================================
+   FOTOGRAFÍA
+========================================================= */
+
+.place-photo {
+
+    width:
+        100%;
+
+    aspect-ratio:
+        4 / 5;
+
+    overflow:
+        hidden;
+
+    background:
+        #eadfd3;
+
+}
+
+
+.place-photo img {
+
+    display:
+        block;
+
+    width:
+        100%;
+
+    height:
+        100%;
+
+    object-fit:
+        cover;
+
+    transition:
+        transform .8s ease;
+
+}
+
+
+.place-card:hover .place-photo img {
+
+    transform:
+        scale(1.03);
+
+}
+
+
+/* =========================================================
+   INFORMACIÓN
+========================================================= */
+
+.place-info {
+
+    padding:
+        32px 25px 35px;
+
+}
+
+
+.place-label {
+
+    display:
+        block;
+
+    margin-bottom:
+        10px;
+
+    color:
+        var(--trigo);
+
+    font-size:
+        .7rem;
+
+    letter-spacing:
+        .2em;
+
+    text-transform:
+        uppercase;
+
+}
+
+
+.place-info h3 {
+
+    color:
+        var(--texto);
+
+    font-size:
+        clamp(
+            1.6rem,
+            4vw,
+            2.1rem
+        );
+
+    font-weight:
+        normal;
+
+}
+
+
+.place-address {
+
+    margin-top:
+        14px;
+
+    color:
+        var(--texto);
+
+    font-size:
+        .9rem;
+
+    line-height:
+        1.6;
+
+}
+
+
+.place-description {
+
+    max-width:
+        430px;
+
+    margin:
+        15px auto 0;
+
+    color:
+        var(--texto-suave);
+
+    font-size:
+        .9rem;
+
+    line-height:
+        1.8;
+
+}
+
+
+/* =========================================================
+   BOTÓN
+========================================================= */
+
+.place-button {
+
+    display:
+        inline-flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        center;
+
+    margin-top:
+        25px;
+
+    padding:
+        11px 24px;
+
+    border:
+        1px solid
+        var(--trigo);
+
+    color:
+        var(--texto);
+
+    background:
+        transparent;
+
+    text-decoration:
+        none;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size:
+        .75rem;
+
+    letter-spacing:
+        .12em;
+
+    text-transform:
+        uppercase;
+
+    transition:
+        background .3s ease,
+        color .3s ease;
+
+}
+
+
+.place-button:hover {
+
+    background:
+        var(--trigo);
+
+    color:
+        var(--blanco);
+
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 768px) {
+
+    .places-section {
+
+        padding:
+            90px 20px 110px;
+
+    }
+
+
+    .places-grid {
+
+        gap:
+            25px;
+
+        margin-top:
+            55px;
+
+    }
+
+
+    .place-info {
+
+        padding:
+            27px 20px 30px;
+
+    }
+
+}
+
+
+/* =========================================================
+   CELULAR
+========================================================= */
+
+@media (max-width: 600px) {
+
+    .places-section {
+
+        padding:
+            80px 18px 100px;
+
+    }
+
+
+    .places-grid {
+
+        grid-template-columns:
+            1fr;
+
+        max-width:
+            500px;
+
+        gap:
+            35px;
+
+    }
+
+
+    .places-intro {
+
+        font-size:
+            .95rem;
+
+    }
+
+
+    .place-photo {
+
+        aspect-ratio:
+            4 / 5;
+
+    }
+
+
+    .place-info h3 {
+
+        font-size:
+            1.7rem;
+
+    }
+
+
+    .place-description {
+
+        font-size:
+            .9rem;
+
+    }
+
+}
+
+/* =========================================================
+   HOSPEDAJE
+========================================================= */
+
+.lodging-section {
+
+    width: 100%;
+
+    padding:
+        120px 20px 140px;
+
+    background:
+        rgba(247, 237, 226, .55);
+
+}
+
+
+.lodging-inner {
+
+    width:
+        min(100%, 900px);
+
+    margin:
+        0 auto;
+
+    text-align:
+        center;
+
+}
+
+
+.lodging-inner h2 {
+
+    color:
+        var(--texto);
+
+    font-size:
+        clamp(
+            2.2rem,
+            7vw,
+            4rem
+        );
+
+    font-weight:
+        normal;
+
+    line-height:
+        1.15;
+
+}
+
+
+.lodging-intro {
+
+    max-width:
+        620px;
+
+    margin:
+        25px auto 0;
+
+    color:
+        var(--texto-suave);
+
+    font-size:
+        1rem;
+
+    line-height:
+        1.8;
+
+}
+
+
+/* =========================================================
+   TARJETA
+========================================================= */
+
+.lodging-card {
+
+    display:
+        grid;
+
+    grid-template-columns:
+        1fr 1fr;
+
+    max-width:
+        850px;
+
+    margin:
+        70px auto 0;
+
+    background:
+        var(--crema-almendra);
+
+    box-shadow:
+        0 20px 50px
+        rgba(102, 88, 79, .08);
+
+}
+
+
+.lodging-photo {
+
+    width:
+        100%;
+
+    min-height:
+        500px;
+
+    overflow:
+        hidden;
+
+}
+
+
+.lodging-photo img {
+
+    display:
+        block;
+
+    width:
+        100%;
+
+    height:
+        100%;
+
+    object-fit:
+        cover;
+
+}
+
+
+.lodging-info {
+
+    display:
+        flex;
+
+    flex-direction:
+        column;
+
+    align-items:
+        center;
+
+    justify-content:
+        center;
+
+    padding:
+        50px 40px;
+
+}
+
+
+.lodging-label {
+
+    color:
+        var(--trigo);
+
+    font-size:
+        .7rem;
+
+    letter-spacing:
+        .15em;
+
+    line-height:
+        1.6;
+
+    text-transform:
+        uppercase;
+
+}
+
+
+.lodging-info h3 {
+
+    margin-top:
+        15px;
+
+    color:
+        var(--texto);
+
+    font-size:
+        clamp(
+            1.6rem,
+            4vw,
+            2.2rem
+        );
+
+    font-weight:
+        normal;
+
+    line-height:
+        1.2;
+
+}
+
+
+.lodging-description {
+
+    max-width:
+        350px;
+
+    margin:
+        25px auto 0;
+
+    color:
+        var(--texto-suave);
+
+    font-size:
+        .95rem;
+
+    line-height:
+        1.9;
+
+}
+
+
+/* =========================================================
+   BOTÓN WHATSAPP
+========================================================= */
+
+.lodging-button {
+
+    display:
+        inline-flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        center;
+
+    margin-top:
+        30px;
+
+    padding:
+        13px 25px;
+
+    border:
+        1px solid
+        var(--trigo);
+
+    background:
+        transparent;
+
+    color:
+        var(--texto);
+
+    text-decoration:
+        none;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size:
+        .72rem;
+
+    letter-spacing:
+        .12em;
+
+    text-transform:
+        uppercase;
+
+    transition:
+        background .3s ease,
+        color .3s ease;
+
+}
+
+
+.lodging-button:hover {
+
+    background:
+        var(--trigo);
+
+    color:
+        var(--blanco);
+
+}
+
+
+.lodging-note {
+
+    margin-top:
+        18px;
+
+    color:
+        var(--texto-suave);
+
+    font-size:
+        .72rem;
+
+    font-style:
+        italic;
+
+}
+
+
+/* =========================================================
+   CELULAR
+========================================================= */
+
+@media (max-width: 700px) {
+
+    .lodging-section {
+
+        padding:
+            90px 18px 110px;
+
+    }
+
+
+    .lodging-card {
+
+        grid-template-columns:
+            1fr;
+
+        margin-top:
+            55px;
+
+    }
+
+
+    .lodging-photo {
+
+        min-height:
+            auto;
+
+        aspect-ratio:
+            4 / 5;
+
+    }
+
+
+    .lodging-info {
+
+        padding:
+            40px 25px 45px;
+
+    }
+
+
+    .lodging-intro {
+
+        font-size:
+            .95rem;
+
+    }
+
+}
+/* =========================================================
+   CÓDIGO DE VESTIMENTA
+========================================================= */
+
+.dresscode-section {
+
+    width: 100%;
+
+    padding:
+        120px 20px 140px;
+
+    background:
+        rgba(247, 237, 226, .55);
+
+}
+
+
+.dresscode-inner {
+
+    width:
+        min(100%, 800px);
+
+    margin:
+        0 auto;
+
+    text-align:
+        center;
+
+}
+
+
+.dresscode-inner h2 {
+
+    color:
+        var(--texto);
+
+    font-size:
+        clamp(
+            2.2rem,
+            7vw,
+            4rem
+        );
+
+    font-weight:
+        normal;
+
+    line-height:
+        1.15;
+
+}
+
+
+.dresscode-intro {
+
+    max-width:
+        620px;
+
+    margin:
+        25px auto 0;
+
+    color:
+        var(--texto-suave);
+
+    font-size:
+        1rem;
+
+    line-height:
+        1.8;
+
+}
+
+
+/* =========================================================
+   TARJETA
+========================================================= */
+
+.dresscode-card {
+
+    max-width:
+        500px;
+
+    margin:
+        65px auto 0;
+
+    padding:
+        55px 40px;
+
+    background:
+        var(--blanco);
+
+    border:
+        1px solid
+        rgba(212, 178, 150, .35);
+
+    box-shadow:
+        0 20px 50px
+        rgba(102, 88, 79, .07);
+
+}
+
+
+.dresscode-symbol {
+
+    width:
+        48px;
+
+    height:
+        48px;
+
+    margin:
+        0 auto 25px;
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        center;
+
+    border:
+        1px solid
+        var(--trigo);
+
+    border-radius:
+        50%;
+
+    color:
+        var(--trigo);
+
+    font-size:
+        1.1rem;
+
+}
+
+
+.dresscode-label {
+
+    display:
+        block;
+
+    color:
+        var(--trigo);
+
+    font-size:
+        .7rem;
+
+    letter-spacing:
+        .25em;
+
+    text-transform:
+        uppercase;
+
+}
+
+
+.dresscode-card h3 {
+
+    margin-top:
+        12px;
+
+    color:
+        var(--texto);
+
+    font-size:
+        clamp(
+            2rem,
+            6vw,
+            3rem
+        );
+
+    font-weight:
+        normal;
+
+}
+
+
+.dresscode-card p {
+
+    max-width:
+        400px;
+
+    margin:
+        20px auto 0;
+
+    color:
+        var(--texto-suave);
+
+    font-size:
+        .95rem;
+
+    line-height:
+        1.9;
+
+}
+
+
+/* =========================================================
+   NOTA FINAL
+========================================================= */
+
+.dresscode-note {
+
+    margin-top:
+        40px;
+
+    color:
+        var(--texto-suave);
+
+    font-size:
+        .85rem;
+
+    font-style:
+        italic;
+
+}
+
+
+/* =========================================================
+   CELULAR
+========================================================= */
+
+@media (max-width: 600px) {
+
+    .dresscode-section {
+
+        padding:
+            90px 18px 110px;
+
+    }
+
+
+    .dresscode-intro {
+
+        font-size:
+            .95rem;
+
+    }
+
+
+    .dresscode-card {
+
+        margin-top:
+            50px;
+
+        padding:
+            45px 25px;
+
+    }
+
+
+    .dresscode-card p {
+
+        font-size:
+            .9rem;
+
+    }
+
+}
+/* =========================================================
+   COLORES A EVITAR
+========================================================= */
+
+.dresscode-avoid {
+
+    margin-top:
+        40px;
+
+    padding-top:
+        30px;
+
+    border-top:
+        1px solid
+        rgba(102, 88, 79, .12);
+
+}
+
+
+.dresscode-avoid-title {
+
+    display:
+        block;
+
+    margin-bottom:
+        22px;
+
+    color:
+        var(--texto);
+
+    font-size:
+        .7rem;
+
+    letter-spacing:
+        .18em;
+
+    text-transform:
+        uppercase;
+
+}
+
+
+.color-list {
+
+    display:
+        flex;
+
+    justify-content:
+        center;
+
+    align-items:
+        flex-start;
+
+    gap:
+        28px;
+
+}
+
+
+.color-item {
+
+    display:
+        flex;
+
+    flex-direction:
+        column;
+
+    align-items:
+        center;
+
+    gap:
+        9px;
+
+    color:
+        var(--texto-suave);
+
+    font-size:
+        .72rem;
+
+}
+
+
+.color-circle {
+
+    display:
+        block;
+
+    width:
+        42px;
+
+    height:
+        42px;
+
+    border-radius:
+        50%;
+
+    border:
+        1px solid
+        rgba(102, 88, 79, .18);
+
+}
+
+
+/* ROJO */
+
+.color-red {
+
+    background:
+        #a83232;
+
+}
+
+
+/* BLANCO */
+
+.color-white {
+
+    background:
+        #fffdf9;
+
+}
+
+
+/* BEIGE */
+
+.color-beige {
+
+    background:
+        #D4B296;
+
+}
+
+
+/* =========================================================
+   CELULAR
+========================================================= */
+
+@media (max-width: 480px) {
+
+    .color-list {
+
+        gap:
+            22px;
+
+    }
+
+
+    .color-circle {
+
+        width:
+            38px;
+
+        height:
+            38px;
+
+    }
+
+}
+
+/* =========================================================
+   EJEMPLO DE VESTIMENTA
+========================================================= */
+
+.dresscode-example {
+
+    max-width:
+        650px;
+
+    margin:
+        65px auto 0;
+
+}
+
+
+.dresscode-example-label {
+
+    margin-bottom:
+        20px;
+
+    color:
+        var(--trigo);
+
+    font-size:
+        .7rem;
+
+    letter-spacing:
+        .2em;
+
+    text-transform:
+        uppercase;
+
+}
+
+
+.dresscode-example-image {
+
+    width:
+        100%;
+
+    overflow:
+        hidden;
+
+    border-radius:
+        2px;
+
+}
+
+
+.dresscode-example-image img {
+
+    display:
+        block;
+
+    width:
+        100%;
+
+    height:
+        auto;
+
+    object-fit:
+        cover;
+
+}
+
+
+/* =========================================================
+   MESA DE REGALOS
+========================================================= */
+
+.gifts-section {
+
+    width: 100%;
+
+    padding:
+        120px 20px 140px;
+
+    background:
+        rgba(247, 237, 226, .55);
+
+}
+
+
+.gifts-inner {
+
+    width:
+        min(100%, 800px);
+
+    margin:
+        0 auto;
+
+    text-align:
+        center;
+
+}
+
+
+.gifts-inner h2 {
+
+    color:
+        var(--texto);
+
+    font-size:
+        clamp(
+            2.2rem,
+            7vw,
+            4rem
+        );
+
+    font-weight:
+        normal;
+
+    line-height:
+        1.15;
+
+}
+
+
+.gifts-intro {
+
+    max-width:
+        620px;
+
+    margin:
+        25px auto 0;
+
+    color:
+        var(--texto-suave);
+
+    font-size:
+        1rem;
+
+    line-height:
+        1.8;
+
+}
+
+
+/* =========================================================
+   OPCIÓN DE REGALO
+========================================================= */
+
+.gift-option {
+
+    width:
+        min(100%, 550px);
+
+    margin:
+        65px auto 0;
+
+    padding:
+        45px 35px;
+
+    background:
+        var(--blanco);
+
+    border:
+        1px solid
+        rgba(212, 178, 150, .35);
+
+    box-shadow:
+        0 20px 50px
+        rgba(102, 88, 79, .07);
+
+    text-align:
+        center;
+
+}
+
+
+.gift-label {
+
+    display:
+        block;
+
+    color:
+        var(--trigo);
+
+    font-size:
+        .7rem;
+
+    letter-spacing:
+        .2em;
+
+    text-transform:
+        uppercase;
+
+}
+
+
+.gift-option h3 {
+
+    margin-top:
+        12px;
+
+    color:
+        var(--texto);
+
+    font-size:
+        clamp(
+            1.7rem,
+            5vw,
+            2.3rem
+        );
+
+    font-weight:
+        normal;
+
+}
+
+
+.gift-description {
+
+    max-width:
+        450px;
+
+    margin:
+        18px auto 0;
+
+    color:
+        var(--texto-suave);
+
+    font-size:
+        .95rem;
+
+    line-height:
+        1.8;
+
+}
+
+
+/* =========================================================
+   BOTÓN
+========================================================= */
+
+.gift-button {
+
+    display:
+        inline-flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        center;
+
+    margin-top:
+        28px;
+
+    padding:
+        13px 26px;
+
+    border:
+        1px solid
+        var(--trigo);
+
+    color:
+        var(--texto);
+
+    text-decoration:
+        none;
+
+    font-size:
+        .72rem;
+
+    letter-spacing:
+        .12em;
+
+    text-transform:
+        uppercase;
+
+    transition:
+        background .3s ease,
+        color .3s ease;
+
+}
+
+
+.gift-button:hover {
+
+    background:
+        var(--trigo);
+
+    color:
+        var(--blanco);
+
+}
+
+
+/* =========================================================
+   CELULAR
+========================================================= */
+
+@media (max-width: 600px) {
+
+    .gifts-section {
+
+        padding:
+            90px 18px 110px;
+
+    }
+
+
+    .gifts-intro {
+
+        font-size:
+            .95rem;
+
+    }
+
+}
+
+/* =========================================================
+   CELEBRACIÓN SOLO PARA ADULTOS
+========================================================= */
+
+.adults-section {
+
+    width: 100%;
+
+    padding:
+        110px 20px 120px;
+
+  background:
+        rgba(247, 237, 226, .55);
+
+}
+
+
+.adults-inner {
+
+    width:
+        min(100%, 700px);
+
+    margin:
+        0 auto;
+
+    text-align:
+        center;
+
+}
+
+
+.adults-inner h2 {
+
+    color:
+        var(--texto);
+
+    font-size:
+        clamp(
+            2.1rem,
+            6vw,
+            3.6rem
+        );
+
+    font-weight:
+        normal;
+
+    line-height:
+        1.15;
+
+}
+
+
+.adults-intro {
+
+    max-width:
+        570px;
+
+    margin:
+        25px auto 0;
+
+    color:
+        var(--texto-suave);
+
+    font-size:
+        1rem;
+
+    line-height:
+        1.9;
+
+}
+
+
+/* =========================================================
+   CELULAR
+========================================================= */
+
+@media (max-width: 600px) {
+
+    .adults-section {
+
+        padding:
+            85px 18px 100px;
+
+    }
+
+
+    .adults-intro {
+
+        font-size:
+            .95rem;
+
+        line-height:
+            1.8;
+
+    }
+
+}
+
+/* =========================================================
+   CONFIRMACIÓN DE ASISTENCIA
+========================================================= */
+
+.rsvp-section {
+
+    width: 100%;
+
+    padding:
+        120px 20px 140px;
+
+     background:
+        rgba(247, 237, 226, .55);
+
+}
+
+
+.rsvp-inner {
+
+    width:
+        min(100%, 800px);
+
+    margin:
+        0 auto;
+
+    text-align:
+        center;
+
+}
+
+
+.rsvp-inner h2 {
+
+    color:
+        var(--texto);
+
+    font-size:
+        clamp(
+            2.2rem,
+            7vw,
+            4rem
+        );
+
+    font-weight:
+        normal;
+
+    line-height:
+        1.15;
+
+}
+
+
+.rsvp-intro {
+
+    max-width:
+        620px;
+
+    margin:
+        25px auto 0;
+
+    color:
+        var(--texto-suave);
+
+    font-size:
+        1rem;
+
+    line-height:
+        1.8;
+
+}
+
+
+/* =========================================================
+   TARJETA
+========================================================= */
+
+.rsvp-card {
+
+    width:
+        min(100%, 550px);
+
+    margin:
+        65px auto 0;
+
+    padding:
+        45px 35px;
+
+    background:
+        var(--blanco);
+
+    border:
+        1px solid
+        rgba(212, 178, 150, .35);
+
+    box-shadow:
+        0 20px 50px
+        rgba(102, 88, 79, .07);
+
+    text-align:
+        center;
+
+}
+
+/* =========================================================
+   NOMBRE DEL INVITADO
+========================================================= */
+
+.name-group {
+
+    margin-top:
+        25px;
+
+    text-align:
+        left;
+
+}
+
+
+.name-group label {
+
+    display:
+        block;
+
+    margin-bottom:
+        10px;
+
+    color:
+        var(--texto);
+
+    font-size:
+        .8rem;
+
+}
+
+
+.name-group input {
+
+    width:
+        100%;
+
+    padding:
+        13px;
+
+    border:
+        1px solid
+        rgba(102, 88, 79, .2);
+
+    outline:
+        none;
+
+    background:
+        #fffefa;
+
+    color:
+        var(--texto);
+
+    font-family:
+        inherit;
+
+    font-size:
+        .9rem;
+
+    box-sizing:
+        border-box;
+
+}
+
+
+.name-group input:focus {
+
+    border-color:
+        var(--trigo);
+
+}
+
+
+/* =========================================================
+   INVITADO
+========================================================= */
+
+.rsvp-welcome {
+
+    margin-bottom:
+        8px;
+
+    color:
+        var(--trigo);
+
+    font-size:
+        .75rem;
+
+    letter-spacing:
+        .2em;
+
+    text-transform:
+        uppercase;
+
+}
+
+
+.rsvp-card h3 {
+
+    color:
+        var(--texto);
+
+    font-size:
+        clamp(
+            1.8rem,
+            6vw,
+            2.5rem
+        );
+
+    font-weight:
+        normal;
+
+}
+
+
+.rsvp-tickets-label {
+
+    margin-top:
+        25px;
+
+    color:
+        var(--texto-suave);
+
+    font-size:
+        .9rem;
+
+}
+
+
+.rsvp-tickets {
+
+    display:
+        block;
+
+    margin-top:
+        6px;
+
+    color:
+        var(--texto);
+
+    font-size:
+        1.25rem;
+
+    font-weight:
+        normal;
+
+}
+
+
+/* =========================================================
+   ASISTENCIA
+========================================================= */
+
+.attendance {
+
+    margin-top:
+        40px;
+
+}
+
+
+.attendance-question {
+
+    color:
+        var(--texto);
+
+    font-size:
+        1rem;
+
+}
+
+
+.attendance-options {
+
+    display:
+        flex;
+
+    justify-content:
+        center;
+
+    gap:
+        12px;
+
+    margin-top:
+        20px;
+
+}
+
+
+.attendance-button {
+
+    padding:
+        12px 20px;
+
+    border:
+        1px solid
+        var(--trigo);
+
+    background:
+        transparent;
+
+    color:
+        var(--texto);
+
+    font-family:
+        inherit;
+
+    font-size:
+        .75rem;
+
+    letter-spacing:
+        .08em;
+
+    cursor:
+        pointer;
+
+    transition:
+        background .3s ease,
+        color .3s ease,
+        border-color .3s ease;
+
+}
+
+
+.attendance-button:hover {
+
+    background:
+        var(--trigo);
+
+    color:
+        var(--blanco);
+
+}
+
+
+/* BOTÓN SELECCIONADO */
+
+.attendance-button.selected {
+
+    background:
+        var(--trigo);
+
+    color:
+        var(--blanco);
+
+}
+
+
+/* =========================================================
+   MENSAJE
+========================================================= */
+
+.message-group {
+
+    margin-top:
+        30px;
+
+    text-align:
+        left;
+
+}
+
+
+.message-group label {
+
+    display:
+        block;
+
+    margin-bottom:
+        10px;
+
+    color:
+        var(--texto);
+
+    font-size:
+        .8rem;
+
+}
+
+
+.message-group label span {
+
+    color:
+        var(--texto-suave);
+
+    font-size:
+        .75rem;
+
+}
+
+
+.message-group textarea {
+
+    width:
+        100%;
+
+    min-height:
+        100px;
+
+    padding:
+        13px;
+
+    resize:
+        vertical;
+
+    border:
+        1px solid
+        rgba(102, 88, 79, .2);
+
+    outline:
+        none;
+
+    background:
+        #fffefa;
+
+    color:
+        var(--texto);
+
+    font-family:
+        inherit;
+
+    font-size:
+        .9rem;
+
+}
+
+
+.message-group textarea:focus {
+
+    border-color:
+        var(--trigo);
+
+}
+
+
+/* =========================================================
+   BOTÓN CONFIRMAR
+========================================================= */
+
+.rsvp-confirm-button {
+
+    margin-top:
+        30px;
+
+    padding:
+        14px 28px;
+
+    border:
+        none;
+
+    background:
+        var(--trigo);
+
+    color:
+        var(--blanco);
+
+    font-family:
+        inherit;
+
+    font-size:
+        .72rem;
+
+    letter-spacing:
+        .12em;
+
+    text-transform:
+        uppercase;
+
+    cursor:
+        pointer;
+
+    transition:
+        opacity .3s ease,
+        transform .3s ease;
+
+}
+
+
+.rsvp-confirm-button:hover {
+
+    opacity:
+        .88;
+
+}
+
+
+.rsvp-confirm-button:active {
+
+    transform:
+        scale(.97);
+
+}
+
+
+/* =========================================================
+   RESPUESTA
+========================================================= */
+
+.rsvp-response {
+
+    margin-top:
+        20px;
+
+    color:
+        var(--texto-suave);
+
+    font-size:
+        .9rem;
+
+    line-height:
+        1.6;
+
+}
+
+
+/* =========================================================
+   CELULAR
+========================================================= */
+
+@media (max-width: 600px) {
+
+    .rsvp-section {
+
+        padding:
+            90px 18px 110px;
+
+    }
+
+
+    .rsvp-card {
+
+        padding:
+            38px 22px;
+
+    }
+
+
+    .attendance-options {
+
+        flex-direction:
+            column;
+
+        gap:
+            10px;
+
+    }
+
+
+    .attendance-button {
+
+        width:
+            100%;
+
+    }
+
+
+    .rsvp-intro {
+
+        font-size:
+            .95rem;
+
+    }
+
+}
+/* =========================================================
+   NUESTROS RECUERDOS
+========================================================= */
+
+.memories-section {
+    text-align: center;
+    padding: 70px 20px;
+     background:
+        rgba(247, 237, 226, .55);
+}
+
+.memories-section .section-title {
+    margin-bottom: 45px;
+}
+
+.memories-content {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.memories-content h3 {
+    margin-bottom: 18px;
+}
+
+.memories-content p {
+    margin: 0 auto 28px;
+    line-height: 1.7;
+}
+
+.qr-link {
+    display: inline-block;
+    text-decoration: none;
+}
+
+.album-qr {
+    display: block;
+    width: 500px;
+    max-width: 80vw;
+    height: auto;
+    margin: 30px auto 20px;
+    transition: transform 0.3s ease;
+}
+
+.qr-link:hover .album-qr {
+    transform: scale(1.03);
+}
+
+.qr-caption {
+    margin-top: 15px;
+    font-size: 1.0rem;
+}
+
+/* =========================================================
+   DESPEDIDA
+========================================================= */
+
+.farewell-section {
+    text-align: center;
+    padding: 80px 20px 70px;
+     background:
+        rgba(247, 237, 226, .55);
+}
+
+.farewell-section .section-title {
+    margin-bottom: 45px;
+}
+
+.farewell-content {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.farewell-content h3 {
+    margin-bottom: 20px;
+}
+
+.farewell-content p {
+    line-height: 1.7;
+    margin: 0 auto 20px;
+}
+
+.farewell-content h4 {
+    margin: 45px 0 25px;
+    letter-spacing: 0.12em;
+}
+
+.farewell-video {
+    width: 100%;
+    max-width: 650px;
+    margin: 0 auto;
+}
+
+.farewell-video video {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+}
+
+.farewell-signature {
+    margin-top: 35px !important;
+    color: var(--texto-suave);
+    line-height: 1.8 !important;
+}
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+.site-footer {
+    text-align: center;
+    padding: 55px 20px 40px;
+}
+
+.footer-names {
+    margin: 0 0 12px;
+    font-size: 1.25rem;
+    letter-spacing: 0.08em;
+}
+
+.footer-thanks {
+    margin: 0 auto 12px;
+    max-width: 500px;
+    line-height: 1.7;
+}
+
+.footer-date {
+    margin: 0;
+    font-size: 0.9rem;
+    opacity: 0.75;
+}
+/* =========================================================
+   GUARDA LA FECHA
+========================================================= */
+
+.save-date-section {
+    width: 100%;
+    text-align: center;
+    padding: 80px 20px;
+     background:
+        rgba(247, 237, 226, .55);
+}
+
+.save-date-section .section-title {
+    margin-bottom: 45px;
+}
+
+.save-date-content {
+    width: min(100%, 650px);
+    margin: 0 auto;
+}
+
+.save-date-content h3 {
+    margin-bottom: 30px;
+    font-weight: normal;
+}
+
+.calendar-image {
+    display: block;
+    width: min(100%, 700px);
+    height: auto;
+    margin: 0 auto 30px;
+}
+
+.save-date-content p {
+    margin: 0 0 25px;
+    line-height: 1.7;
+}
+
+.calendar-button {
+    display: inline-block;
+    padding: 14px 28px;
+    text-decoration: none;
+    color: inherit;
+    border: 1px solid currentColor;
+    transition:
+        transform .3s ease,
+        background-color .3s ease;
+}
+
+.calendar-button:hover {
+    transform: translateY(-2px);
+}
+/* =========================================================
+   BOTÓN DE MÚSICA
+========================================================= */
+
+.music-button {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    z-index: 999;
+
+    width: 48px;
+    height: 48px;
+
+    border: 1px solid rgba(120, 90, 70, .35);
+    border-radius: 50%;
+
+    background: rgba(255, 250, 245, .88);
+    color: var(--texto);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 1.15rem;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 5px 18px rgba(60, 40, 25, .15);
+
+    backdrop-filter: blur(5px);
+
+    transition:
+        transform .3s ease,
+        background .3s ease;
+}
+
+.music-button:hover {
+    transform: scale(1.08);
+}
+
+.music-button:active {
+    transform: scale(.95);
+}
+
+
+/* =========================================================
+   BRILLOS ELEGANTES — VERSIÓN MÁS VISTOSA
+========================================================= */
+
+.sparkles-container {
+    position: fixed;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    overflow: hidden;
+    z-index: 9998;
+}
+
+.sparkle {
+    position: absolute;
+    top: -30px;
+
+    width: 5px;
+    height: 5px;
+
+    border-radius: 50%;
+
+    background: #fff8dc;
+
+    opacity: 0;
+
+    box-shadow:
+        0 0 5px #ffffff,
+        0 0 10px #fff4bd,
+        0 0 18px rgba(255, 218, 120, .95),
+        0 0 30px rgba(255, 200, 80, .55);
+
+    animation:
+        sparkleFall linear forwards;
+}
+
+
+/* =========================================================
+   DESTELLOS GRANDES
+========================================================= */
+
+.sparkle.star {
+    width: 14px;
+    height: 14px;
+
+    background: transparent;
+
+    box-shadow: none;
+}
+
+
+/* Destello vertical */
+
+.sparkle.star::before {
+    content: "";
+
+    position: absolute;
+
+    top: 50%;
+    left: 50%;
+
+    width: 3px;
+    height: 24px;
+
+    transform:
+        translate(-50%, -50%);
+
+    background:
+        linear-gradient(
+            to bottom,
+            transparent,
+            #ffffff 35%,
+            #fff1ad 50%,
+            #ffffff 65%,
+            transparent
+        );
+
+    filter:
+        drop-shadow(0 0 5px #fff)
+        drop-shadow(0 0 10px #ffd76a);
+}
+
+
+/* Destello horizontal */
+
+.sparkle.star::after {
+    content: "";
+
+    position: absolute;
+
+    top: 50%;
+    left: 50%;
+
+    width: 24px;
+    height: 3px;
+
+    transform:
+        translate(-50%, -50%);
+
+    background:
+        linear-gradient(
+            to right,
+            transparent,
+            #ffffff 35%,
+            #fff1ad 50%,
+            #ffffff 65%,
+            transparent
+        );
+
+    filter:
+        drop-shadow(0 0 5px #fff)
+        drop-shadow(0 0 10px #ffd76a);
+}
+
+
+/* =========================================================
+   ANIMACIÓN
+========================================================= */
+
+@keyframes sparkleFall {
+
+    0% {
+        transform:
+            translate3d(0, -30px, 0)
+            scale(.3)
+            rotate(0deg);
+
+        opacity: 0;
+    }
+
+    12% {
+        opacity: 1;
+    }
+
+    35% {
+        transform:
+            translate3d(25px, 35vh, 0)
+            scale(1)
+            rotate(90deg);
+    }
+
+    60% {
+        transform:
+            translate3d(-20px, 65vh, 0)
+            scale(.9)
+            rotate(180deg);
+
+        opacity: .9;
+    }
+
+    85% {
+        opacity: .7;
+    }
+
+    100% {
+        transform:
+            translate3d(15px, 110vh, 0)
+            scale(.4)
+            rotate(300deg);
+
+        opacity: 0;
+    }
+}
+
+.sparkle.star::before,
+.sparkle.star::after {
+    content: "";
+
+    position: absolute;
+
+    top: 50%;
+    left: 50%;
+
+    background:
+        linear-gradient(
+            to bottom,
+            transparent,
+            rgba(255, 239, 190, .95),
+            transparent
+        );
+
+    transform:
+        translate(-50%, -50%);
+}
+
+.sparkle.star::before {
+    width: 2px;
+    height: 18px;
+
+    box-shadow:
+        0 0 8px rgba(255, 225, 150, .9);
+}
+
+.sparkle.star::after {
+    width: 18px;
+    height: 2px;
+
+    box-shadow:
+        0 0 8px rgba(255, 225, 150, .9);
+}
+
+
+/* =========================================================
+   CAÍDA
+========================================================= */
+
+@keyframes sparkleFall {
+
+    0% {
+        transform:
+            translate3d(0, -30px, 0)
+            rotate(0deg)
+            scale(.3);
+
+        opacity: 0;
+    }
+
+    12% {
+        opacity: .95;
+    }
+
+    35% {
+        transform:
+            translate3d(25px, 35vh, 0)
+            rotate(90deg)
+            scale(1);
+    }
+
+    60% {
+        transform:
+            translate3d(-20px, 65vh, 0)
+            rotate(180deg)
+            scale(.85);
+
+        opacity: .75;
+    }
+
+    85% {
+        opacity: .5;
+    }
+
+    100% {
+        transform:
+            translate3d(15px, 110vh, 0)
+            rotate(300deg)
+            scale(.4);
+
+        opacity: 0;
+    }
+}
+
+
+/* =========================================================
+   BRILLOS EN CELULAR
+========================================================= */
+
+@media (max-width: 600px) {
+
+    .sparkle {
+        width: 4px;
+        height: 4px;
+
+        box-shadow:
+            0 0 5px rgba(255, 224, 150, .9),
+            0 0 12px rgba(255, 246, 210, .7);
+    }
+
+    .sparkle.star {
+        width: 10px;
+        height: 10px;
+    }
+
+    .sparkle.star::before {
+        height: 15px;
+    }
+
+    .sparkle.star::after {
+        width: 15px;
+    }
+}
+
+/* =========================================================
+   VIDEO
+========================================================= */
+
+.video-section {
+    width: 100%;
+    padding: 80px 20px;
+    text-align: center;
+}
+
+/* =========================================================
+   VIDEO RESPONSIVO
+========================================================= */
+
+.video-container {
+    width: 100%;
+    max-width: 700px;
+    margin: 40px auto 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+.video-container video {
+    display: block;
+
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+
+    object-fit: contain;
+
+    border-radius: 12px;
+}
+@media (max-width: 600px) {
+
+    .video-container {
+        width: 100%;
+        max-width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .video-container video {
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+    }
+}
+
+
+
+.gift-image {
+    width: 100%;
+    max-width: 120px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+
+@media (max-width: 600px) {
+    .gift-image {
+        max-width: 80px;
+    }
+}
+
+

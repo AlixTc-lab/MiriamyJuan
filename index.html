@@ -1,0 +1,1210 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0, viewport-fit=cover"
+    >
+
+    <meta
+        name="theme-color"
+        content="#F7EDE2"
+    >
+
+    <title>
+        Miriam & Juan | Invitación
+    </title>
+
+    <link
+        rel="stylesheet"
+        href="style.css"
+    >
+
+</head>
+
+
+<body>
+<!-- =========================================================
+     BRILLOS
+========================================================= -->
+
+<div id="sparkles" class="sparkles-container"></div>
+
+<!-- =========================================================
+     BOTÓN DE MÚSICA
+========================================================= -->
+
+<button
+    id="musicButton"
+    class="music-button"
+    type="button"
+    aria-label="Pausar música"
+>
+    🔊
+</button>
+
+<audio
+    id="backgroundMusic"
+    src="amor.mp3"
+    loop
+    preload="auto"
+></audio>
+    <!-- =====================================================
+         INVITACIÓN
+         
+         La invitación existe desde el principio.
+         El sobre solamente está encima de ella.
+    ====================================================== -->
+
+    <main id="invitation">
+
+
+       <!-- =================================================
+     HERO
+================================================== -->
+
+<section class="hero">
+
+    <div class="hero-overlay"></div>
+
+    <div class="hero-content">
+
+        <p class="hero-small">
+            Tenemos el honor de invitarte
+        </p>
+
+       
+
+        <h1>
+            Miriam
+            <span>&amp;</span>
+            Juan
+        </h1>
+
+        <p class="hero-date">
+            14 · 11 · 2026
+        </p>
+
+        <p class="hero-location">
+            Una fecha para celebrar el amor
+        </p>
+
+        <div class="scroll-indicator">
+
+            <span>
+                Desliza para descubrir
+            </span>
+
+            <div class="scroll-arrow">
+                ↓
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+        <!-- =================================================
+             EL RESTO DE LA INVITACIÓN
+             
+             Lo iremos construyendo paso a paso.
+        ================================================== -->
+
+ <section class="invitation-body">
+
+
+<!-- =================================================
+     NUESTRA HISTORIA
+================================================== -->
+
+<section class="story-section">
+
+    <div class="story-inner">
+
+        <p class="eyebrow">
+            Nuestra historia
+        </p>
+
+        <h2>
+            El comienzo de nuestra historia
+        </h2>
+
+        <p class="story-text">
+            Después de tantos momentos compartidos,
+            hoy queremos celebrar el comienzo de
+            una nueva etapa.
+        </p>
+
+    </div>
+
+</section> <!-- ================= nuesta historia ================= -->
+
+<section class="video-section">
+
+    <div class="section-inner">
+
+     
+        <div class="video-container">
+
+      <video
+    autoplay
+    muted
+    loop
+    playsinline
+    controls
+    preload="auto"
+>
+    <source
+        src="VI.mp4"
+        type="video/mp4"
+    >
+
+    Tu navegador no puede reproducir este video.
+</video>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =================================================
+     NUESTRO GRAN DÍA
+================================================== -->
+
+<section class="great-day-section">
+
+    <div class="great-day-inner">
+
+        <p class="eyebrow">
+            Nuestro gran día
+        </p>
+
+        <h2>
+            14 de noviembre de 2026
+        </h2>
+
+
+        <!-- ================= CUENTA REGRESIVA ================= -->
+
+        <div
+            class="countdown"
+            id="countdown"
+            aria-label="Cuenta regresiva para nuestra boda"
+        >
+
+            <div class="countdown-item">
+
+                <span
+                    class="countdown-number"
+                    id="days"
+                >
+                    00
+                </span>
+
+                <span class="countdown-label">
+                    Días
+                </span>
+
+            </div>
+
+
+            <div class="countdown-item">
+
+                <span
+                    class="countdown-number"
+                    id="hours"
+                >
+                    00
+                </span>
+
+                <span class="countdown-label">
+                    Horas
+                </span>
+
+            </div>
+
+
+            <div class="countdown-item">
+
+                <span
+                    class="countdown-number"
+                    id="minutes"
+                >
+                    00
+                </span>
+
+                <span class="countdown-label">
+                    Minutos
+                </span>
+
+            </div>
+
+
+            <div class="countdown-item">
+
+                <span
+                    class="countdown-number"
+                    id="seconds"
+                >
+                    00
+                </span>
+
+                <span class="countdown-label">
+                    Segundos
+                </span>
+
+            </div>
+
+        </div>
+
+
+        <!-- ================= MENSAJE FINAL ================= -->
+
+        <div
+            class="countdown-finished"
+            id="countdownFinished"
+            aria-live="polite"
+        >
+            ¡HOY ES EL GRAN DÍA!
+        </div>
+
+    </div>
+
+</section> <!-- ================= final sección  grandia contador================= -->
+
+<!-- =================================================
+     NUESTROS RECUERDOS
+================================================== -->
+
+<section class="memories-section">
+
+    <div class="memories-inner">
+
+        <p class="eyebrow">
+            Nuestros recuerdos
+        </p>
+
+        <h2>
+            Momentos Especiales
+        </h2>
+
+        <p class="memories-description">
+            Una pequeña colección de momentos que forman
+            parte de nuestra historia.
+        </p>
+
+
+        <!-- ================= SWIPER ================= -->
+
+        <div class="memories-slider">
+
+            <button
+                class="memory-arrow memory-prev"
+                id="memoryPrev"
+                type="button"
+                aria-label="Fotografía anterior"
+            >
+                ←
+            </button>
+
+
+            <div class="memory-viewport">
+
+                <div
+                    class="memory-track"
+                    id="memoryTrack"
+                >
+
+                    <!-- FOTOGRAFÍA 01 -->
+
+                    <div class="memory-slide">
+
+                        <div class="memory-photo">
+
+                            <img
+                                src="recuerdo-01.jpeg"
+                                alt="Nuestro recuerdo 1"
+                            >
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- FOTOGRAFÍA 02 -->
+
+                    <div class="memory-slide">
+
+                        <div class="memory-photo">
+
+                            <img
+                                src="recuerdo-02.jpeg"
+                                alt="Nuestro recuerdo 2"
+                            >
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- FOTOGRAFÍA 03 -->
+
+                    <div class="memory-slide">
+
+                        <div class="memory-photo">
+
+                            <img
+                                src="recuerdo-03.jpeg"
+                                alt="Nuestro recuerdo 3"
+                            >
+
+                        </div>
+
+                    </div>
+
+
+
+
+                 
+
+
+                  
+
+                </div>
+
+            </div>
+
+
+            <button
+                class="memory-arrow memory-next"
+                id="memoryNext"
+                type="button"
+                aria-label="Fotografía siguiente"
+            >
+                →
+            </button>
+
+        </div>
+
+
+        <!-- ================= CONTADOR ================= -->
+
+        <div
+            class="memory-counter"
+            aria-live="polite"
+        >
+
+            <span id="memoryCurrent">
+                01
+            </span>
+
+            <span class="memory-divider">
+                /
+            </span>
+
+            <span id="memoryTotal">
+                06
+            </span>
+
+        </div>
+
+
+        <!-- ================= INDICADORES ================= -->
+
+        <div
+            class="memory-dots"
+            id="memoryDots"
+            aria-label="Seleccionar fotografía"
+        >
+
+            <button
+                type="button"
+                class="memory-dot active"
+                data-slide="0"
+                aria-label="Ir a fotografía 1"
+            ></button>
+
+            <button
+                type="button"
+                class="memory-dot"
+                data-slide="1"
+                aria-label="Ir a fotografía 2"
+            ></button>
+
+            <button
+                type="button"
+                class="memory-dot"
+                data-slide="2"
+                aria-label="Ir a fotografía 3"
+            ></button>
+
+            <button
+                type="button"
+                class="memory-dot"
+                data-slide="3"
+                aria-label="Ir a fotografía 4"
+            ></button>
+
+            <button
+                type="button"
+                class="memory-dot"
+                data-slide="4"
+                aria-label="Ir a fotografía 5"
+            ></button>
+
+            <button
+                type="button"
+                class="memory-dot"
+                data-slide="5"
+                aria-label="Ir a fotografía 6"
+            ></button>
+
+        </div>
+
+    </div>
+
+</section>  <!-- ================= final sección galeria================= -->
+
+<!-- =====================================================
+     FAMILIA
+====================================================== -->
+
+<section class="family-section" id="familia">
+
+    <div class="family-inner">
+
+        <p class="eyebrow">
+            Nuestros padres y Padrinos
+        </p>
+
+        <h2>
+            Las personas que nos acompañan
+        </h2>
+
+        <p class="family-intro">
+            Hay personas que han estado presentes en cada
+            paso de nuestra historia y que hoy forman parte
+            de este momento tan especial.
+        </p>
+
+
+       
+
+ <div class="family-group family-special">
+  <p class="family-label">
+                Nuestros Padres
+            </p>
+
+                     <p class="family-label">
+                Novia
+            </p>
+
+
+   <div class="family-list">
+  <!-- PERSONA 01 -->
+
+                <article class="family-person">
+
+                    <span class="family-person-role">
+                        Madre
+                    </span>
+
+                    <h3>
+                        Guadalupe Resendiz Cruz
+                    </h3>
+
+                </article>
+
+
+                 <article class="family-person">
+
+                    <span class="family-person-role">
+                        Padre
+                    </span>
+
+                    <h3>
+                        Victoriano Reyes Hernández 
+                    </h3>
+
+                </article>
+
+            </div>
+<br>
+<br>
+              <p class="family-label">
+                Novio
+            </p>
+   <div class="family-list">
+  <!-- PERSONA 01 -->
+
+                <article class="family-person">
+
+                    <span class="family-person-role">
+                        Madre
+                    </span>
+
+                    <h3>
+                      Susana Castañeda Salas 
+                    </h3>
+
+                </article>
+
+
+                 <article class="family-person">
+
+                    <span class="family-person-role">
+                        Padre
+                    </span>
+
+                    <h3>
+                      Juan Jesús Barrera Mondragón 
+                    </h3>
+
+                </article>
+
+            </div>
+ </div>
+        <!-- ==============================================
+             FAMILIARES / PERSONAS ESPECIALES
+        ================================================== -->
+
+        <div class="family-group family-special">
+
+          
+    
+            <p class="family-label">
+                Nuestros Padrinos
+            </p>
+
+
+            <div class="family-list">
+
+
+                <!-- PERSONA 01 -->
+
+                <article class="family-person">
+
+                    <span class="family-person-role">
+                        Madrina
+                    </span>
+
+                    <h3>
+                       María Guadalupe Sánchez López
+                    </h3>
+
+                </article>
+
+
+                <!-- PERSONA 02 -->
+
+                <article class="family-person">
+
+                    <span class="family-person-role">
+                        Padrino
+                    </span>
+
+                    <h3>
+                        Enrique Resendiz Cruz 
+                    </h3>
+
+                </article>
+
+
+                
+
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section> <!-- ================= final de familia ================= -->
+
+<!-- =====================================================
+     LUGARES
+====================================================== -->
+
+<section class="places-section" id="lugares">
+
+    <div class="places-inner">
+
+        <p class="eyebrow">
+            Lugares
+        </p>
+
+        <h2>
+            Donde celebraremos
+        </h2>
+
+        <p class="places-intro">
+            Dos lugares especiales donde compartiremos
+            los momentos más importantes de nuestro gran día.
+        </p>
+
+
+        <!-- =================================================
+             LUGARES
+        ================================================== -->
+
+        <div class="places-grid">
+
+
+            <!-- ================= IGLESIA ================= -->
+
+            <article class="place-card">
+
+    <div class="place-photo">
+
+        <img
+            src="paroquia.png"
+            alt="Parroquia de San Francisco de Asís, Temascalapa"
+        >
+
+    </div>
+
+    <div class="place-info">
+
+        <span class="place-label">
+            Ceremonia
+        </span>
+
+        <h3>
+            Parroquia del Inmaculado Corazón de María
+        </h3>
+
+        <p class="place-address">
+         14:30 hrs  Valle de Los Cipreses Manzana 003, Izcalli del Valle, 54945 Buenavista, Méx.
+        </p>
+
+        <p class="place-description">
+            Aquí compartiremos el comienzo
+            de este momento tan especial.
+        </p>
+
+        <a
+            href="https://maps.app.goo.gl/DRAM57DWB9otUgJy8 
+
+"
+            class="place-button"
+            target="_blank"
+            rel="noopener"
+        >
+            Ver ubicación
+        </a>
+
+    </div>
+
+</article>
+
+
+            <!-- ================= SALÓN ================= -->
+
+           <article class="place-card">
+
+    <div class="place-photo">
+
+        <img
+            src="salon.jpg"
+            alt="Hotel Finca Los Marin, Temascalapa"
+        >
+
+    </div>
+
+    <div class="place-info">
+
+        <span class="place-label">
+            Celebración
+        </span>
+
+        <h3>
+            Jardin JOPS
+        </h3>
+
+        <p class="place-address">
+           16:30 hrs Calle Vicente Guerrero 12, Margarita Maza de Juárez, 52926 Cdad. López Mateos, Méx.
+        </p>
+
+        <p class="place-description">
+            Aquí continuaremos la celebración
+            junto a nuestros seres queridos.
+        </p>
+
+        <a
+            href="https://maps.app.goo.gl/w2yRmHooAg7eGhje8"
+            class="place-button"
+            target="_blank"
+            rel="noopener"
+        >
+            Ver ubicación
+        </a>
+
+    </div>
+
+</article>
+
+
+        </div>
+
+    </div>
+
+</section><!-- ================= final sección lugares ================= -->
+
+
+<!-- =====================================================
+     CÓDIGO DE VESTIMENTA
+====================================================== -->
+
+<section class="dresscode-section" id="vestimenta">
+
+    <div class="dresscode-inner">
+
+        <p class="eyebrow">
+            Código de vestimenta
+        </p>
+
+        <h2>
+            Elegancia para celebrar
+        </h2>
+
+        <p class="dresscode-intro">
+            Queremos que este día se sienta tan especial
+            como lo hemos imaginado, por eso te invitamos
+            a acompañarnos con el siguiente código de
+            vestimenta.
+        </p>
+
+
+        <!-- =================================================
+             CÓDIGO
+        ================================================== -->
+
+        <div class="dresscode-card">
+
+            <div class="dresscode-symbol">
+                ✦
+            </div>
+
+            <span class="dresscode-label">
+                Dress Code
+            </span>
+
+            <h3>
+                Libre
+            </h3>
+
+            <p>
+               No tenemos un código de vestimenta establecido, ¡ven como te sientas más cómodo! 🤍
+Solo te pedimos evitar el color blanco, reservado para la novia.
+
+Y si al final de la fiesta te animas… ¡las botas vaqueras son más que bienvenidas para seguir celebrando! 🤠✨
+            </p>
+ <!-- COLORES A EVITAR -->
+
+    <div class="dresscode-avoid">
+
+        <span class="dresscode-avoid-title">
+            Colores a evitar
+        </span>
+
+
+        <div class="color-list">
+
+
+          
+
+
+            <div class="color-item">
+
+                <span
+                    class="color-circle color-white"
+                    aria-hidden="true"
+                ></span>
+
+                <span>
+                    Blanco
+                </span>
+
+            </div>
+
+
+
+
+        </div>
+
+    </div>
+        </div>
+
+
+
+        
+        <!-- =================================================
+             NOTA
+        ================================================== -->
+
+        <div class="dresscode-note">
+
+            <span>
+                Gracias por ser parte de este día.
+            </span>
+
+        </div>
+
+    </div>
+
+
+
+</section><!-- ================= final sección  codigo de vestimenta ================= -->
+
+<!-- =====================================================
+     MESA DE REGALOS
+====================================================== -->
+
+<section class="gifts-section" id="mesa-regalos">
+
+    <div class="gifts-inner">
+
+        <p class="eyebrow">
+            Mesa de regalos
+        </p>
+
+        <h2>
+            Un detalle de cariño
+        </h2>
+
+        <p class="gifts-intro">
+            Tu presencia es nuestro mejor regalo.
+            Si deseas acompañarnos con un detalle,
+            hemos preparado una opción para ti.
+        </p>
+
+
+        
+  <!-- =================================================
+             TARJETA DE LA MESA DE REGALOS
+        ================================================== -->
+
+        <div class="gift-option">
+
+           <span class="gift-label">
+    Tu presencia es nuestro mejor regalo
+</span>
+
+<h3>
+    Un detalle con cariño
+</h3>
+
+<br>
+
+<p>
+    Si deseas hacernos un presente físico,
+    será recibido con mucho cariño y gratitud.
+    <br>
+    Lo más importante para nosotros es compartir
+    este día contigo, disfrutar cada momento
+    y celebrar juntos.
+</p>
+
+<div class="dresscode-example">
+
+   
+
+    <div class="dresscode-example-image">
+
+        <img
+            src="rege.png"
+            alt="Ejemplo de vestimenta"
+        >
+  
+    </div>
+
+</div>
+    
+    </div>
+
+     
+
+</section><!-- ================= final seccion regalos ================= -->
+
+
+
+
+<!-- =====================================================
+     CONFIRMACIÓN DE ASISTENCIA
+====================================================== -->
+
+<section
+    class="rsvp-section"
+    id="confirmacion"
+>
+
+    <div class="rsvp-inner">
+
+        <p class="eyebrow">
+            Confirmación de asistencia
+        </p>
+
+        <h2>
+            Queremos celebrar contigo
+        </h2>
+
+        <p class="rsvp-intro">
+            Tu presencia hará aún más especial este día.
+            Confirma tu asistencia para acompañarnos
+            en esta celebración.
+        </p>
+
+
+
+    </div>
+
+</section>
+
+<!-- ================= final sección confirmación ================= -->
+
+
+
+
+<!-- =========================================================
+     DESPEDIDA
+========================================================= -->
+
+<section class="farewell-section">
+
+    <h2 class="section-title">
+        GRACIAS POR ACOMPAÑARNOS
+    </h2>
+
+    <div class="farewell-content">
+
+        <h3>
+            Un día que recordaremos siempre
+        </h3>
+
+        <p>
+            Tu presencia hará que este momento
+            sea todavía más especial para nosotros.
+        </p>
+
+        <p>
+            Gracias por ser parte de nuestra historia
+            y por acompañarnos en este día tan importante.
+        </p>
+
+        <h4>
+            Te esperamos 
+        </h4>
+
+  <div class="dresscode-example">
+
+   
+
+    <div class="dresscode-example-image">
+
+        <img
+            src="final.png"
+            alt="Ejemplo de vestimenta"
+        >
+  
+    </div>
+
+        <div class="dresscode-example-image">
+
+        <img
+            src="CA.jpg"
+            alt="Ejemplo de vestimenta"
+        >
+  
+    </div>
+
+</div>
+
+        <p class="farewell-signature">
+            Con cariño,<br>
+            Miriam &amp; Juan
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     FOOTER
+========================================================= -->
+
+<footer class="site-footer">
+
+    <p class="footer-names">
+        Miriam &amp; Juan
+    </p>
+
+    <p class="footer-thanks">
+        Gracias por ser parte de este día tan especial.
+    </p>
+
+    <p class="footer-date">
+        Con cariño, siempre.
+    </p>
+
+</footer>
+
+        </section>  <!-- ================= final sección body ================= -->
+
+
+
+    </main>
+
+
+
+    <!-- =====================================================
+         SOBRE / PANTALLA DE APERTURA
+
+         Está encima de toda la invitación.
+    ====================================================== -->
+
+    <section
+        id="envelope"
+        class="envelope-screen"
+        aria-label="Abrir invitación"
+    >
+
+
+        <!-- =================================================
+             FONDO
+        ================================================== -->
+
+        <div class="envelope-background"></div>
+
+
+
+        <!-- =================================================
+             PANEL IZQUIERDO
+        ================================================== -->
+
+        <div
+            class="envelope-panel panel-left"
+            aria-hidden="true"
+        >
+
+            <div class="paper-highlight"></div>
+
+        </div>
+
+
+
+        <!-- =================================================
+             PANEL DERECHO
+        ================================================== -->
+
+        <div
+            class="envelope-panel panel-right"
+            aria-hidden="true"
+        >
+
+            <div class="paper-highlight"></div>
+
+        </div>
+
+
+
+        <!-- =================================================
+             PLIEGUE CENTRAL
+        ================================================== -->
+
+        <div
+            class="center-fold"
+            aria-hidden="true"
+        ></div>
+
+
+
+        <!-- =================================================
+             SELLO DE CERA
+             
+             IMPORTANTE:
+             Aquí NO dibujaremos el sello con CSS.
+             
+             Cuando tengas la fotografía:
+             
+             sello.png
+             
+             simplemente se coloca en esta carpeta.
+        ================================================== -->
+
+        <button
+            id="seal"
+            class="seal"
+            type="button"
+            aria-label="Abrir invitación"
+        >
+
+            <img
+                src="sello.png"
+                alt="Sello de cera"
+                class="seal-image"
+            >
+
+        </button>
+
+
+
+        <!-- =================================================
+             INSTRUCCIÓN
+        ================================================== -->
+
+        <div class="envelope-instruction">
+
+            <span>
+                Toca el sello
+            </span>
+
+            <small>
+                para abrir la invitación
+            </small>
+
+        </div>
+
+
+
+        <!-- =================================================
+             CERRAR
+             
+             Por ahora lo conservamos porque pertenece
+             al funcionamiento del ejemplo.
+        ================================================== -->
+
+        <button
+            id="closeEnvelope"
+            class="close-envelope"
+            type="button"
+            aria-label="Cerrar invitación"
+        >
+
+            ×
+
+        </button>
+
+
+    </section>
+
+
+
+    <!-- =====================================================
+         JAVASCRIPT
+    ====================================================== -->
+
+    <script src="script.js"></script>
+
+
+</body>
+
+</html>
