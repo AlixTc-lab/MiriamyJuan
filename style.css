@@ -206,7 +206,7 @@ body {
 
 
 .hero h1 {
-
+   font-family: "Ephesis", cursive;
     font-size:
         clamp(3rem, 10vw, 7rem);
 
